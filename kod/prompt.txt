@@ -1,0 +1,10 @@
+
+wygenerujesz mi na podstawie rozpisu tree strukture tak jak ponizej
+
+\fg[\textwidth]{rys/lokalizacja}{nazwa pliku png}{OZNACZnazwa pliku png}
+
+\OznaczZdjecie[]{OZNACZnazwa pliku png} %TODO: Oznacz zdjecie
+
+\clearpage
+
+napisz czy rozumiesz i jaki ma byc nastepny krok

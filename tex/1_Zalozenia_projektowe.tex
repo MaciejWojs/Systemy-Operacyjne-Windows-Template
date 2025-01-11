@@ -1,5 +1,39 @@
 	\newpage
 \section{Założenia projektowe – wymagania}		%1
-% (Skopiować z wytycznych do projektu) 
 
-\footnote{\cite{www1}}
+% * SPOSOBY UZYWANIA MAKRA HERE * # 
+% ? Listingi
+% Parametr #1: Opis listingu (wyświetla sie bezpośrednio pod listingiem)
+% Parametr #2 : Nazwa pliku oraz ID do oznaczania (wazne, zeby byl w katalogu kod oraz jego rozszerzenie to txt) 
+
+\ListingFile{OpisPromptu}{prompt}
+
+Tak oznaczamy listingi \OznaczKod{prompt} w tekście.\\Za pomocą:
+
+  \begin{verbatim}
+	ListingFile\{Opis listingu}{nazwa-pliku} 
+ \end{verbatim}
+	
+	wstawiamy listingi z plików z katalogu kod.
+
+
+
+\clearpage
+% ? Zdjęcia
+% Parametr #1: Szerokość zdjęcia (domyślnie jest to szerokość paragrafu ale jak sie poda w [#1] to wtedy zmienia się na podaną wartość)
+% Parametr #2: Nazwa pliku z rozszerzeniem (podajemy katalog w którym jest plik i jego rozszerzenie np. rys/nazwa-rysunku.png)
+% Parametr #3: Opis tego co jest na rysunku (wyświetla sie bezpośrednio pod rysunkiem) 
+% Parametr #4: Identyfikator rysunku (do oznaczania zdjęć w tekście) 
+
+\fg[\textwidth]{rys/nazwa-rysunku.png}{Opis tego co jest na rysunku}{id-rysunku}
+
+Tak oznaczamy zdjęcia \OznaczZdjecie{id-rysunku} w tekście.\\Za pomocą:
+
+  \begin{verbatim}
+	\fg{szerokość-rysunku}{nazwa-pliku}{Opis rysunku}{id-rysunku} 
+ \end{verbatim}
+	
+	wstawiamy zdjęcia z plików z katalogu rys.
+
+
+
