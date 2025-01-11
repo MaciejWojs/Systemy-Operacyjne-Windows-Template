@@ -8,7 +8,7 @@
 
 \ListingFile{OpisPromptu}{prompt}
 
-Tak oznaczamy listingi \OznaczKod{prompt} w tekście.\\Za pomocą:
+Tak wstawiamy listingi, za pomocą:
 
   \begin{verbatim}
 	ListingFile\{Opis listingu}{nazwa-pliku} 
@@ -16,24 +16,57 @@ Tak oznaczamy listingi \OznaczKod{prompt} w tekście.\\Za pomocą:
 	
 	wstawiamy listingi z plików z katalogu kod.
 
+Gdzie:
+\begin{verbatim}
+	{Opis listingu} - opis listingu wyświetlany pod listingiem
+	{nazwa-pliku} - nazwa pliku z katalogu kod i jednocześnie ID do oznaczania
+\end{verbatim}
+
+Tak oznaczamy listingi \OznaczKod{prompt} w tekście.\\Za pomocą:
+
+\begin{verbatim}
+	ListingFile\{Opis listingu}{nazwa-pliku} 
+\end{verbatim}
+
+gdzie:
+
+\begin{verbatim}
+	{nazwa-pliku} - nazwa pliku z katalogu kod i jednocześnie ID do oznaczania
+\end{verbatim}
+
 
 
 \clearpage
 % ? Zdjęcia
-% Parametr #1: Szerokość zdjęcia (domyślnie jest to szerokość paragrafu ale jak sie poda w [#1] to wtedy zmienia się na podaną wartość)
+% OPCJONALNY Parametr #1: Szerokość zdjęcia (domyślnie jest to szerokość paragrafu ale jak sie poda w [#1] to wtedy zmienia się na podaną wartość)
 % Parametr #2: Nazwa pliku z rozszerzeniem (podajemy katalog w którym jest plik i jego rozszerzenie np. rys/nazwa-rysunku.png)
 % Parametr #3: Opis tego co jest na rysunku (wyświetla sie bezpośrednio pod rysunkiem) 
 % Parametr #4: Identyfikator rysunku (do oznaczania zdjęć w tekście) 
 
-\fg[\textwidth]{rys/nazwa-rysunku.png}{Opis tego co jest na rysunku}{id-rysunku}
+\fg{rys/nazwa-rysunku.png}{Opis tego co jest na rysunku}{id-rysunku}
 
-Tak oznaczamy zdjęcia \OznaczZdjecie{id-rysunku} w tekście.\\Za pomocą:
+jest równe 
+\fg[\textwidth]{rys/nazwa-rysunku.png}{Opis tego co jest na rysunku}{id-rysunku}
+\clearpage
+Tak wstawiamy zdjęcia, za pomocą:
 
   \begin{verbatim}
 	\fg{szerokość-rysunku}{nazwa-pliku}{Opis rysunku}{id-rysunku} 
  \end{verbatim}
-	
-	wstawiamy zdjęcia z plików z katalogu rys.
+
+ Gdzie:
+\begin{verbatim}
+	{szerokość-rysunku} - szerokość rysunku domyślnie \textwidth
+	{nazwa-pliku} - nazwa pliku z katalogu rys i jego rozszerzenie
+	{Opis rysunku} - opis rysunku wyświetlany pod rysunkiem
+	{id-rysunku} - identyfikator rysunku
+\end{verbatim}
+
+ Tak oznaczamy zdjęcia \OznaczZdjecie{id-rysunku} w tekście. Za pomocą:
+
+  \begin{verbatim}
+	\OznaczZdjecie{id-rysunku}
+	\end{verbatim}
 
 
 
