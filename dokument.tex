@@ -9,7 +9,8 @@
     \input{preambula_ustawienia.tex}
 
     %polecenia zdefiniowane w pakiecie strona_tytulowa.sty
-    \title{...Algorytm listy dwukierunkowej \\z zastosowaniem GitHub...}		%...Wpisać nazwę projektu...
+    \title{Zaprojektować i wdrożyć system informatyczny na
+    potrzeby przedsiębiorstwa zgodnie z założeniami}		%...Wpisać nazwę projektu...
     \author{Imie Nazwisko}
     \authorI{}
     \authorII{}		%jeśli są dwie osoby w projekcie to zostawiamy:    \authorII{}
@@ -18,9 +19,9 @@
     \instytut{Wydział Nauk Inżynieryjnych}
     \kierunek{Katedra Informatyki}
     \praca{DOKUMENTACJA PROJEKTOWA}
-    \przedmiot{ZAAWANSOWANE PROGRAMOWANIE}
-    \prowadzacy{mgr inż. Dawid Kotlarski}
-    \rok{2024}
+    \przedmiot{SYSTEMY OPERACYJNE}
+    \prowadzacy{mgr inż. Jan Kozieński}
+    \rok{2025}
 
 
 %definicja składni mikrotik
@@ -65,17 +66,19 @@
     
 %%%%%%%%%%%%%%%%%%% treść główna dokumentu %%%%%%%%%%%%%%%%%%%%%%%%%
 
-   \input{tex/rozdzial1.tex}
-   \input{tex/rozdzial2.tex}
-   \input{tex/rozdzial3.tex}
-   \input{tex/rozdzial4.tex}
-   \input{tex/rozdzial5.tex}
+   \input{tex/1_Zalozenia_projektowe.tex}
+   \input{tex/2_Opis_uzytych_technologii.tex}
+   \input{tex/3_Schemat_logiczny.tex}
+   \input{tex/4_Instalacja_uslug.tex}
+   \input{tex/5_Testy.tex}
+   \input{tex/6_Wnioski.tex}
    
        
 %%%%%%%%%%%%%%%%%%% koniec treść główna dokumentu %%%%%%%%%%%%%%%%%%%%%
 	\newpage
-    \addcontentsline{toc}{section}{Literatura}  
-	\printbibliography
+    % \addcontentsline{toc}{section}{Literatura}
+    % Modified by: Maciej Wójs  
+    \printbibliography[heading=bibnumbered, label=Literatura, title=Literatura]
 
     \newpage
     \hypersetup{linkcolor=black}
@@ -97,6 +100,7 @@
 	\renewcommand\lstlistlistingname{Spis listingów}
 	\addcontentsline{toc}{section}{Spis listingów}\lstlistoflistings 
 	\thispagestyle{fancy}
+    \label{LastPage}
 	
 
 
