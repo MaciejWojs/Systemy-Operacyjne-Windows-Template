@@ -14,9 +14,30 @@
         "latex-workshop.linting.lacheck.enabled": true,
         "latex-workshop.latex.tools": [
           {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+              "-interaction=nonstopmode",
+                "--shell-escape",
+                "-synctex=1",
+                "%DOCFILE%"
+            ]
+        },
+        {
+          "name": "lualatex-draft",
+          "command": "lualatex",
+          "args": [
+            "-interaction=nonstopmode",
+            "--shell-escape",
+              "-draftmode",
+              "%DOCFILE%"
+          ]
+        },
+          {
             "name": "pdflatex",
             "command": "pdflatex",
             "args": [
+              "--interaction=nonstopmode",
               "--shell-escape",
               "-synctex=1",
               "%DOCFILE%"
@@ -26,6 +47,7 @@
             "name": "pdflatex-draft",
             "command": "pdflatex",
             "args": [
+              "--interaction=nonstopmode",
               "--shell-escape",
               "-draftmode",
               "-synctex=1",
@@ -41,6 +63,22 @@
           }
         ],
         "latex-workshop.latex.recipes": [
+          {
+            "name": "lualatex-draft -> biber -> lualatex*2",
+            "tools": [
+                "lualatex-draft",
+                "biber",
+                "lualatex",
+                "lualatex"
+            ]
+        },
+          {
+            "name": "[Without biber] -> lualatex*2",
+            "tools": [
+                "lualatex",
+                "lualatex"
+            ]
+        },
           {
             "name": "pdflatex-draft -> biber -> pdflatex-draft -> pdflatex",
             "tools": [
